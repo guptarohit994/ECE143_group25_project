@@ -1,0 +1,29 @@
+body, input, select, button {
+	font-family: Lucida Grande,Lucida Sans,Arial,sans-serif;
+	
+}
+.ui-widget{ font-size:0.8em; } 
+
+.ui-tbgrid-header {font-size: 12px; padding: .2em .2em; text-align: left;}
+
+.ui-jqgrid .ui-jqgrid-htable th div {
+    height:auto;
+    overflow:hidden;
+    padding-right:4px;
+    padding-top:2px;
+    position:relative;
+    vertical-align:text-top;
+    white-space:normal !important;
+}
+
+#base {
+	padding-left: 1em;
+	margin-left: 1em;
+	text-indent: -1.5em;
+	
+	}
+
+	
+
+
+
