@@ -121,3 +121,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# mac FS 
+.DS_Store
+
+# selenium gechodriver temp files
+*geckodriver.log
