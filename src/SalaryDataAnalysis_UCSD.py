@@ -1,11 +1,28 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[227]:
+
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+
+# In[228]:
+
+
 salary_data = pd.read_csv('salary.csv', thousands=',')
 
+
+# In[229]:
+
+
 salary_data;  #let's look at our data
+
+
+# In[230]:
 
 
 salary_data['Location'];  # DataFrames object
@@ -13,9 +30,14 @@ salary_data.Location;     # Series object
 salary_data[['Location', 'Title']];  #looking at two columns at the same time.
 
 
+# In[231]:
+
+
 # filtering for specific values
 salary_data[salary_data.Location == 'San Diego'];
 
+
+# In[232]:
 
 
 """
@@ -24,8 +46,11 @@ merge three columns into one in order to find total payment for individuals.
 """
 del salary_data['GrossPay'];
 # Turning pay columns into numeric ones and create TotalPay column:
-salary_data[['RegularPay', 'OvertimePay', 'OtherPay']] = salary_data[['RegularPay', 'OvertimePay', 'OtherPay']].apply(pd.to_numeric)
+salary_data[['RegularPay', 'OvertimePay', 'OtherPay']] = salary_data[['RegularPay', 'OvertimePay', 'OtherPay']].apply(pd.to_numeric)  
 salary_data['TotalPay'] = salary_data['RegularPay'] + salary_data['OvertimePay'] + salary_data['OtherPay']
+
+
+# In[233]:
 
 
 # How many different titles do we have in our data?
@@ -45,20 +70,32 @@ full_prof = pd.concat([salary_data_professors, assoc_prof]).drop_duplicates(keep
 full_prof = pd.concat([prof, assist_prof]).drop_duplicates(keep=False)
 
 
+# In[241]:
+
+
+def draw_histogram(pay_data, color):
+    """
+    This function depicts the histogram using the data provided
+    """
+    color = "tab:" + color
+    plt.figure(figsize=(12,8))
+    plt.ylabel('Count', fontsize=16)
+    plt.xlabel('TotalPay', fontsize=16)
+    sns.distplot(total_payment, bins=20, kde=False, color=color)
+
+
+# In[242]:
+
+
 # We can now look at some basic statistics about professor salaries in broad sense.
 total_payment = salary_data_professors['TotalPay']
-total_payment.dropna()  # eliminate na rows
+total_payment.dropna()  # eliminate na rows 
 total_payment.mean();  # 206741 $
 total_payment.max();   # 1936497 $
 total_payment.min();   # 344 $
 
 # Let's visualize our total pay data
-
-# Histogram
-plt.figure(figsize=(12,8))
-plt.ylabel('Count', fontsize=16)
-plt.xlabel('TotalPay', fontsize=16)
-sns.distplot(total_payment, bins=20, kde=False, color="tab:red")
+draw_histogram(total_payment, 'red')
 
 # Boxplot
 sns.set(style="whitegrid")
@@ -67,47 +104,45 @@ ax = sns.boxplot(x='TotalPay',data=salary_data_professors, orient="v")
 # boxplot with respect to professor titles:
 # ax = sns.boxplot(x='Title',y='TotalPay',data=salary_data_professors, orient="v")
 
-# Assistant Professor analysis
+
+# In[244]:
+
+
+# Assistant Professor analysis 
 total_payment_assist = assist_prof['TotalPay']
-total_payment_assist.dropna()  # eliminate na rows
+total_payment_assist.dropna()  # eliminate na rows 
 total_payment_assist.mean()  # 169362 $
 total_payment_assist.max()   # 976604 $
 total_payment_assist.min()   # 363 $
 
 # Let's visualize our total pay data
-# Histogram
-plt.figure(figsize=(12,8));
-plt.ylabel('Count', fontsize=16);
-plt.xlabel('TotalPay', fontsize=16);
-plt.title('Assistant Professor Salary', fontsize=20);
-sns.distplot(total_payment_assist, bins=20, kde=False, color="tab:purple")
+draw_histogram(total_payment_assist, 'purple')
 
 
-# Associate Professor analysis
+# In[245]:
+
+
+# Associate Professor analysis 
 total_payment_assoc = assoc_prof['TotalPay']
-total_payment_assoc.dropna()  # eliminate na rows
+total_payment_assoc.dropna()  # eliminate na rows 
 total_payment_assoc.mean()  # 210413 $
 total_payment_assoc.max()   # 1340678 $
 total_payment_assoc.min()   # 495 $
 
-# Histogram
-plt.figure(figsize=(12,8));
-plt.ylabel('Count', fontsize=16);
-plt.xlabel('TotalPay', fontsize=16);
-plt.title('Associate Professor Salary', fontsize=20);
-sns.distplot(total_payment_assoc, bins=20, kde=False, color="tab:cyan")
+# Let's visualize our total pay data
+draw_histogram(total_payment_assoc, 'cyan')
 
-# Full Professor analysis
+
+# In[246]:
+
+
+# Full Professor analysis 
 total_payment_prof = full_prof['TotalPay']
-total_payment_prof.dropna()  # eliminate na rows
+total_payment_prof.dropna()  # eliminate na rows 
 total_payment_prof.mean()  # 205861 $
 total_payment_prof.max()   # 1936497 $
 total_payment_prof.min()   # 344 $
 
 # Let's visualize our total pay data
-# Histogram
-plt.figure(figsize=(12,8))
-plt.ylabel('Count', fontsize=16)
-plt.xlabel('TotalPay', fontsize=16)
-plt.title('Full Professor Salary', fontsize=20);
-sns.distplot(total_payment_prof, bins=20, kde=False, color="tab:green")
+draw_histogram(total_payment_assoc, 'green')
+
