@@ -7,11 +7,9 @@ salary_data = pd.read_csv('salary.csv', thousands=',')
 
 salary_data;  #let's look at our data
 
-
 salary_data['Location'];  # DataFrames object
 salary_data.Location;     # Series object
 salary_data[['Location', 'Title']];  #looking at two columns at the same time.
-
 
 # filtering for specific values
 salary_data[salary_data.Location == 'San Diego'];
@@ -67,7 +65,6 @@ plt.figure(figsize=(10,8))
 ax = sns.boxplot(x='TotalPay',data=salary_data_professors, orient="v")
 # boxplot with respect to professor titles:
 # ax = sns.boxplot(x='Title',y='TotalPay',data=salary_data_professors, orient="v")
-
 
 # Assistant Professor analysis 
 total_payment_assist = assist_prof['TotalPay']
