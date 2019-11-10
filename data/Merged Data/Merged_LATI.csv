@@ -1,0 +1,6 @@
+SNo,Year,Location,FirstName,LastName,Title,GrossPay,RegularPay,OvertimePay,OtherPay,fullName,Instructor,Course,Term,Enroll,EvalsMade,RcmndClass,RcmndInstr,StudyHrs/wk,AvgGradeExpected,AvgGradeReceived
+32355,2018,San Diego,LUIS,MARTIN-CABRERA,ASSOC PROF-AY,"106,898.00","91,800.00",0.00,"15,098.00",MARTINCABRERALUIS,"Martin-Cabrera,Luis",LATI10-LatAmerStudies&USLiberation(A),WI19,30,12,90.0%,90.0%,2.3,B+(3.33),B(3.17)
+44897,2018,San Diego,LEON,ZAMOSC,RECALL TEACHING,"10,109.00","10,109.00",0.00,0.00,ZAMOSCLEON,"Zamosc,Leon",LATI50-IntroductiontoLatinAmerica(A),S114,20,6,60.0%,100.0%,4.1,B(3.25),B+(3.39)
+44897,2018,San Diego,LEON,ZAMOSC,RECALL TEACHING,"10,109.00","10,109.00",0.00,0.00,ZAMOSCLEON,"Zamosc,Leon",LATI50-IntroductiontoLatinAmerica(A),WI10,89,35,71.4%,62.9%,4.04,B+(3.54),B+(3.40)
+44897,2018,San Diego,LEON,ZAMOSC,RECALL TEACHING,"10,109.00","10,109.00",0.00,0.00,ZAMOSCLEON,"Zamosc,Leon",LATI50-IntroductiontoLatinAmerica(A),WI09,89,46,76.1%,53.3%,4.07,B+(3.39),B+(3.46)
+44897,2018,San Diego,LEON,ZAMOSC,RECALL TEACHING,"10,109.00","10,109.00",0.00,0.00,ZAMOSCLEON,"Zamosc,Leon",LATI50-IntroductiontoLatinAmerica(A),WI08,155,101,77.3%,63.9%,3.26,B+(3.45),B(3.17)

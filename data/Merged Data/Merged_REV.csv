@@ -1,0 +1,3 @@
+SNo,Year,Location,FirstName,LastName,Title,GrossPay,RegularPay,OvertimePay,OtherPay,fullName,Instructor,Course,Term,Enroll,EvalsMade,RcmndClass,RcmndInstr,StudyHrs/wk,AvgGradeExpected,AvgGradeReceived
+16263,2018,San Diego,WAEL,AL-DELAIMY,PROF-HCOMP,"178,008.00","150,382.00",0.00,"27,626.00",ALDELAIMYWAEL,"Aldelaimy,Wael",REV160GS-PublicHealth&EpidemiologyI(A),S112,19,9,66.7%,77.8%,15.61,B(3.00),B-(2.78)
+16263,2018,San Diego,WAEL,AL-DELAIMY,PROF-HCOMP,"178,008.00","150,382.00",0.00,"27,626.00",ALDELAIMYWAEL,"Aldelaimy,Wael",REV165GS-PublicHealth/EpidemiologyII(A),S112,19,8,62.5%,75.0%,15.5,B(3.29),B-(2.89)

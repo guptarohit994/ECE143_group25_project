@@ -1,0 +1,5 @@
+SNo,Year,Location,FirstName,LastName,Title,GrossPay,RegularPay,OvertimePay,OtherPay,fullName,Instructor,Course,Term,Enroll,EvalsMade,RcmndClass,RcmndInstr,StudyHrs/wk,AvgGradeExpected,AvgGradeReceived
+25239,2018,San Diego,CARL H.,GIBSON,PROF-AY-B/E/E,"150,058.00","150,058.00",0.00,0.00,GIBSONCARLH,"Gibson,CarlH.",STPA35-SocietyandtheSea(B),FA10,35,15,71.4%,64.3%,4.77,B+(3.54),B+(3.40)
+25239,2018,San Diego,CARL H.,GIBSON,PROF-AY-B/E/E,"150,058.00","150,058.00",0.00,0.00,GIBSONCARLH,"Gibson,CarlH.",STPA35-SocietyandtheSea(A),FA09,45,28,71.4%,64.3%,3.76,B+(3.38),B+(3.48)
+25239,2018,San Diego,CARL H.,GIBSON,PROF-AY-B/E/E,"150,058.00","150,058.00",0.00,0.00,GIBSONCARLH,"Gibson,CarlH.",STPA35-SocietyandtheSea(A),FA08,58,30,66.7%,76.7%,2.5,B+(3.48),B+(3.51)
+25239,2018,San Diego,CARL H.,GIBSON,PROF-AY-B/E/E,"150,058.00","150,058.00",0.00,0.00,GIBSONCARLH,"Gibson,CarlH.",STPA35-SocietyandtheSea(A),FA07,64,53,81.3%,75.5%,3.85,B+(3.67),B+(3.65)

@@ -1,0 +1,5 @@
+SNo,Year,Location,FirstName,LastName,Title,GrossPay,RegularPay,OvertimePay,OtherPay,fullName,Instructor,Course,Term,Enroll,EvalsMade,RcmndClass,RcmndInstr,StudyHrs/wk,AvgGradeExpected,AvgGradeReceived
+36152,2018,San Diego,PATRICK H.,PATTERSON,ASSOC PROF-AY,"144,390.00","102,450.00",0.00,"41,940.00",PATTERSONPATRICKH,"Patterson,PatrickH.",HMNR100-HumanRightsI:Hist.&Theory(A),WI14,10,9,100.0%,100.0%,8.94,B+(3.67),B+(3.58)
+36908,2018,San Diego,NANCY GREY,POSTERO,PROF-AY,"100,250.00","100,250.00",0.00,0.00,POSTERONANCYGREY,"Postero,NancyGrey",HMNR101-HumanRightsII:ContempIssue(A),SP13,24,7,100.0%,100.0%,6.5,B+(3.57),B+(3.41)
+36908,2018,San Diego,NANCY GREY,POSTERO,PROF-AY,"100,250.00","100,250.00",0.00,0.00,POSTERONANCYGREY,"Postero,NancyGrey",HMNR101-HumanRightsII:ContempIssue(B),SP12,23,11,100.0%,100.0%,5.23,B+(3.67),B(3.24)
+36908,2018,San Diego,NANCY GREY,POSTERO,PROF-AY,"100,250.00","100,250.00",0.00,0.00,POSTERONANCYGREY,"Postero,NancyGrey",HMNR101-HumanRightsII:ContempIssue(B),SP12,20,12,90.9%,90.9%,6.1,B+(3.67),B(3.24)

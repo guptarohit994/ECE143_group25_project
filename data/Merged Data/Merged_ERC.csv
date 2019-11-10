@@ -1,0 +1,3 @@
+SNo,Year,Location,FirstName,LastName,Title,GrossPay,RegularPay,OvertimePay,OtherPay,fullName,Instructor,Course,Term,Enroll,EvalsMade,RcmndClass,RcmndInstr,StudyHrs/wk,AvgGradeExpected,AvgGradeReceived
+23612,2018,San Diego,IVAN T,EVANS,COLLEGE PROVOST,"161,625.00","150,375.00",0.00,"11,250.00",EVANSIVANT,"Evans,IvanT",ERC190GS-EnvironSustainability/Zambia(A),S118,24,5,100.0%,100.0%,1.5,A(4.00),A(4.00)
+23612,2018,San Diego,IVAN T,EVANS,COLLEGE PROVOST,"161,625.00","150,375.00",0.00,"11,250.00",EVANSIVANT,"Evans,IvanT",ERC192A-GlobalServicePrepSeminar(A),WI18,26,15,85.7%,78.6%,1.64,B+(3.50),B+(3.59)
