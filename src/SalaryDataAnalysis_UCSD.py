@@ -14,7 +14,6 @@ salary_data[['Location', 'Title']];  #looking at two columns at the same time.
 # filtering for specific values
 salary_data[salary_data.Location == 'San Diego'];
 
-
 """
 Let's make an analysis on payment. First get rid of gross pay column,
 merge three columns into one in order to find total payment for individuals.
@@ -23,7 +22,6 @@ del salary_data['GrossPay'];
 # Turning pay columns into numeric ones and create TotalPay column:
 salary_data[['RegularPay', 'OvertimePay', 'OtherPay']] = salary_data[['RegularPay', 'OvertimePay', 'OtherPay']].apply(pd.to_numeric)  
 salary_data['TotalPay'] = salary_data['RegularPay'] + salary_data['OvertimePay'] + salary_data['OtherPay']
-
 
 # How many different titles do we have in our data?
 titles = set(salary_data['Title'])
@@ -50,7 +48,6 @@ def draw_histogram(pay_data, color):
     plt.ylabel('Count', fontsize=16)
     plt.xlabel('TotalPay', fontsize=16)
     sns.distplot(total_payment, bins=20, kde=False, color=color)
-
 
 # We can now look at some basic statistics about professor salaries in broad sense.
 total_payment = salary_data_professors['TotalPay']
