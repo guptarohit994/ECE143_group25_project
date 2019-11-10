@@ -1,28 +1,11 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[227]:
-
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-
-# In[228]:
-
-
 salary_data = pd.read_csv('salary.csv', thousands=',')
 
-
-# In[229]:
-
-
 salary_data;  #let's look at our data
-
-
-# In[230]:
 
 
 salary_data['Location'];  # DataFrames object
@@ -30,15 +13,8 @@ salary_data.Location;     # Series object
 salary_data[['Location', 'Title']];  #looking at two columns at the same time.
 
 
-# In[231]:
-
-
 # filtering for specific values
 salary_data[salary_data.Location == 'San Diego'];
-
-
-# In[232]:
-
 
 """
 Let's make an analysis on payment. First get rid of gross pay column,
@@ -48,10 +24,6 @@ del salary_data['GrossPay'];
 # Turning pay columns into numeric ones and create TotalPay column:
 salary_data[['RegularPay', 'OvertimePay', 'OtherPay']] = salary_data[['RegularPay', 'OvertimePay', 'OtherPay']].apply(pd.to_numeric)  
 salary_data['TotalPay'] = salary_data['RegularPay'] + salary_data['OvertimePay'] + salary_data['OtherPay']
-
-
-# In[233]:
-
 
 # How many different titles do we have in our data?
 titles = set(salary_data['Title'])
@@ -69,10 +41,6 @@ assist_prof = salary_data_professors[salary_data_professors['Title'].str.contain
 full_prof = pd.concat([salary_data_professors, assoc_prof]).drop_duplicates(keep=False)
 full_prof = pd.concat([prof, assist_prof]).drop_duplicates(keep=False)
 
-
-# In[241]:
-
-
 def draw_histogram(pay_data, color):
     """
     This function depicts the histogram using the data provided
@@ -82,10 +50,6 @@ def draw_histogram(pay_data, color):
     plt.ylabel('Count', fontsize=16)
     plt.xlabel('TotalPay', fontsize=16)
     sns.distplot(total_payment, bins=20, kde=False, color=color)
-
-
-# In[242]:
-
 
 # We can now look at some basic statistics about professor salaries in broad sense.
 total_payment = salary_data_professors['TotalPay']
@@ -105,9 +69,6 @@ ax = sns.boxplot(x='TotalPay',data=salary_data_professors, orient="v")
 # ax = sns.boxplot(x='Title',y='TotalPay',data=salary_data_professors, orient="v")
 
 
-# In[244]:
-
-
 # Assistant Professor analysis 
 total_payment_assist = assist_prof['TotalPay']
 total_payment_assist.dropna()  # eliminate na rows 
@@ -118,10 +79,6 @@ total_payment_assist.min()   # 363 $
 # Let's visualize our total pay data
 draw_histogram(total_payment_assist, 'purple')
 
-
-# In[245]:
-
-
 # Associate Professor analysis 
 total_payment_assoc = assoc_prof['TotalPay']
 total_payment_assoc.dropna()  # eliminate na rows 
@@ -131,10 +88,6 @@ total_payment_assoc.min()   # 495 $
 
 # Let's visualize our total pay data
 draw_histogram(total_payment_assoc, 'cyan')
-
-
-# In[246]:
-
 
 # Full Professor analysis 
 total_payment_prof = full_prof['TotalPay']
