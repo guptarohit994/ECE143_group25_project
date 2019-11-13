@@ -1,9 +1,12 @@
 # ECE143_group25_project
  FA19 course final project
+ 
+ ## Table of Contents
+  * [Data Crawling](#data-crawling)
 
-# Data Crawling
+## Data Crawling
 
-## UCOP
+### UCOP
 ```
 cd crawling_and_parsing
 python ucop_crawler.py --location='Berkeley'
