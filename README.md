@@ -6,7 +6,7 @@
 ## UCOP
 ```
 cd crawling_and_parsing
-python ucop_crawler.py -h
+python ucop_crawler.py --location='Berkeley'
 ```
 Sample output (downcounts to 0) -
 ```
