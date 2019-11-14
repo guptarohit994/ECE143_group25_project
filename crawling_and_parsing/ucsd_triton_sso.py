@@ -9,9 +9,9 @@ def initiate_sso_login(driver):
 	status = WebDriverWait(driver, 60, poll_frequency=0.5).\
 	    	until(lambda x: x.find_element_by_id('ssousername'), "Timed out waiting for SSO page!")
 
-	print("====================== Initiating a SSO login ====================")
+	print("*********** Initiating a SSO login ***********")
 	# username for SSO
-	driver.find_element_by_id('main-content').find_element_by_id('ssousername').send_keys('xxxxxxxx')
+	driver.find_element_by_id('main-content').find_element_by_id('ssousername').send_keys('xxxxxxxxx')
 
 	# password for SSO
 	driver.find_element_by_id('main-content').find_element_by_id('ssopassword').send_keys('xxxxxxxx')

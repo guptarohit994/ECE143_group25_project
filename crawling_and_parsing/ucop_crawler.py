@@ -141,8 +141,13 @@ if __name__ == "__main__":
                         help='dir where to place the generated csv, default:\'../data/csv/ucop/\'')
     args = parser.parse_args()
 
+    if args.headless == 'False':
+        headless = False
+    else:
+        headless = True
+
     print(f"year:{args.year}, location:{args.location}, headless:{args.headless}, geckodriver_path:{args.geckodriver_path}, output_dir:{args.output_dir}")
 
     print("=========================================================================================")
-    do_ucop_crawl(location=args.location, year=args.year, headless=args.headless, geckodriver_path=args.geckodriver_path, output_dir=args.output_dir)
+    do_ucop_crawl(location=args.location, year=args.year, headless=headless, geckodriver_path=args.geckodriver_path, output_dir=args.output_dir)
     print("=========================================================================================")
