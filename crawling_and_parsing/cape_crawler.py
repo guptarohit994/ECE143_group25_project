@@ -13,11 +13,13 @@ from os import path
 
 
 
-def do_cape_crawl(department='all', headless=True, geckodriver_path='./geckodriver', output_dir="."):
+def do_cape_crawl(department='all', detailed=False, headless=True, geckodriver_path='./geckodriver', output_dir="."):
     '''
     Crawls information for all courses in various departments on CAPE webpage
     :param department: specific department whose data to crawl, default:'all'
     :type department: str
+    :type detailed: form of data scraping. Detailed are much slower. default:False
+    :type detailed: bool
     :param headless: mode in which to launch browser, default:True
     :type headless: bool
     :param geckodriver_path: path to the geckodriver executable, default:'./geckodriver'
@@ -108,7 +110,7 @@ def do_cape_crawl(department='all', headless=True, geckodriver_path='./geckodriv
 
 
         try:
-            rows = get_parsed_rows_cape(dept=dept_keyword, dept_num=(index+1), total_dept=total_departments, html_source=driver.page_source, driver=driver)
+            rows = get_parsed_rows_cape(dept=dept_keyword, dept_num=(index+1), total_dept=total_departments, html_source=driver.page_source, driver=driver, detailed=detailed)
             if (len(rows) <= 1):
                 print(f"Didn't find any valid row for {dept_keyword}!")
             else:
@@ -136,6 +138,8 @@ if __name__ == "__main__":
     parser = ArgumentParser(description='Crawls information for all courses in various departments on CAPE webpage')
     parser.add_argument('--department', type=str,default='all',
                         help='specific department whose data to crawl. Either 1 or all, default:\'all\'')
+    parser.add_argument('--detailed', type=str,default='False',
+                        help='form of data scraping. Detailed are much slower. default:\'False\'')
     parser.add_argument('--headless', type=str,default='True',
                         help='mode in which to launch browser, default:\'True\'')
     parser.add_argument('--geckodriver_path', type=str, nargs='?', default='./geckodriver',
@@ -149,9 +153,14 @@ if __name__ == "__main__":
     else:
         headless = True
 
-    print(f"department:{args.department}, headless:{args.headless}, geckodriver_path:{args.geckodriver_path}, output_dir:{args.output_dir}")
+    if args.detailed == 'True':
+        detailed = True
+    else:
+        detailed = False
+
+    print(f"department:{args.department}, detailed:{detailed}, headless:{args.headless}, geckodriver_path:{args.geckodriver_path}, output_dir:{args.output_dir}")
 
     print("=========================================================================================")
-    do_cape_crawl(department=args.department, headless=headless, geckodriver_path=args.geckodriver_path, output_dir=args.output_dir)
+    do_cape_crawl(department=args.department, detailed=detailed, headless=headless, geckodriver_path=args.geckodriver_path, output_dir=args.output_dir)
     print("=========================================================================================")
 

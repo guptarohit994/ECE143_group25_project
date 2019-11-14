@@ -7,7 +7,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from sys import stdout
 
-def get_parsed_rows_cape(dept, dept_num, total_dept, html_source, driver):
+def get_parsed_rows_cape(dept, dept_num, total_dept, html_source, driver, detailed):
     '''
     Function that takes in source code of a page from http://cape.ucsd.edu/responses/Results.aspx
     and returns list of list(columns as entries for each row).
@@ -54,33 +54,34 @@ def get_parsed_rows_cape(dept, dept_num, total_dept, html_source, driver):
         for index,i in enumerate(row.find_all('td')):
             fixed_values.append(i.get_text().replace('"','').strip().replace(' ',''))
             
-            # check there is a hyperlink element
-            a_element = i.find_all('a', href=True)
-            if (len(a_element) > 0):
-                assert len(a_element) == 1, "expected only 1 href in the course column per row"
-                assert index == 1, "Expected a href only in Course column (index=1)"
-                a_element_link = a_element[0]['href']
-                a_element_id = a_element[0]['id']
+            if (detailed):
+                # check there is a hyperlink element
+                a_element = i.find_all('a', href=True)
+                if (len(a_element) > 0):
+                    assert len(a_element) == 1, "expected only 1 href in the course column per row"
+                    assert index == 1, "Expected a href only in Course column (index=1)"
+                    a_element_link = a_element[0]['href']
+                    a_element_id = a_element[0]['id']
 
-                more_course_dict = crawl_parse_course_offering_page("https://cape.ucsd.edu/responses/" + a_element_link, driver)
-                
-                new_columns_found = [j for j in list(more_course_dict.keys()) if j not in columns_found]
-                
-                
-                if len(more_course_dict.keys()) == 0:
-                    print("")
-                    print(f"No valid results found for {dept} course {course_num+1} and link: {a_element_link}")
-                    stop_processing = True
-                else:
-                    stdout.write('\r')
-                    print_string = f"{dept} results({course_num+1} courses)"
-                    # need to pad with spaces to keep the above string of fixed length, otherwise remains are not cleaned from screen
-                    stdout.write(f"             parsing department ({dept_num}/{total_dept}), {'{s:{c}^{n}}'.format(s=print_string,n=40,c=' ')}")
-                    stdout.flush()
+                    more_course_dict = crawl_parse_course_offering_page("https://cape.ucsd.edu/responses/" + a_element_link, driver)
+                    
+                    new_columns_found = [j for j in list(more_course_dict.keys()) if j not in columns_found]
+                    
+                    
+                    if len(more_course_dict.keys()) == 0:
+                        print("")
+                        print(f"No valid results found for {dept} course {course_num+1} and link: {a_element_link}")
+                        stop_processing = True
+                    else:
+                        stdout.write('\r')
+                        print_string = f"{dept} results({course_num+1} courses)"
+                        # need to pad with spaces to keep the above string of fixed length, otherwise remains are not cleaned from screen
+                        stdout.write(f"             parsing department ({dept_num}/{total_dept}), {'{s:{c}^{n}}'.format(s=print_string,n=40,c=' ')}")
+                        stdout.flush()
 
-                columns_found += new_columns_found
-                
-                this_course_dict.update(more_course_dict)
+                    columns_found += new_columns_found
+                    
+                    this_course_dict.update(more_course_dict)
         
         if stop_processing:
             break
