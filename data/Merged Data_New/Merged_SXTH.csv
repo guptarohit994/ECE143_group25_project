@@ -1,0 +1,10 @@
+Instructor,Course,Term,Enroll,EvalsMade,RcmndClass,RcmndInstr,StudyHrs/wk,AvgGradeExpected,AvgGradeReceived,lastName,firstName,fName2,lName2,GrossPay
+"Chilukuri,LakshmiN",SXTH1-FirstYearExperience(A),FA18,61,45,83.3%,100.0%,0.92,A(4.00),,CHILUKURI,LAKSHMIN,LAKSHMI,CHILUKURI,"90,218.00"
+"Pomeroy,RobertS.",SXTH2-TransferYearExperience(A),FA18,42,23,95.5%,95.5%,1.05,A(4.00),,POMEROY,ROBERTS,ROBERTS,POMEROY,"132,989.00"
+"Christenfeld,Nicholas",SXTH1-FirstYearExperience(A),FA17,86,55,78.4%,84.3%,1.0,A-(3.95),,CHRISTENFELD,NICHOLAS,NICHOLAS,CHRISTENFELD,"144,642.00"
+"Pomeroy,RobertS.",SXTH2-TransferYearExperience(A),FA17,35,15,76.9%,100.0%,0.81,A(4.00),,POMEROY,ROBERTS,ROBERTS,POMEROY,"132,989.00"
+"Christenfeld,Nicholas",SXTH1-FirstYearExperience(A),FA16,64,37,80.0%,85.7%,2.1,A-(3.87),,CHRISTENFELD,NICHOLAS,NICHOLAS,CHRISTENFELD,"144,642.00"
+"Donoghue,DanielJ.",SXTH2-TransferYearExperience(A),FA16,35,19,94.1%,100.0%,2.26,A(4.00),,DONOGHUE,DANIELJ,DANIELJ,DONOGHUE,"175,675.00"
+"Donoghue,DanielJ.",SXTH1-FirstYearExperience(A),FA15,102,61,86.7%,95.0%,1.14,A-(3.85),,DONOGHUE,DANIELJ,DANIELJ,DONOGHUE,"175,675.00"
+"Donoghue,DanielJ.",SXTH2-TransferYearExperience(A),FA15,33,18,75.0%,93.8%,3.88,A(4.00),,DONOGHUE,DANIELJ,DANIELJ,DONOGHUE,"175,675.00"
+"Donoghue,DanielJ.",SXTH1-FirstYearExperience(A),FA14,89,55,83.0%,100.0%,2.38,A-(3.88),,DONOGHUE,DANIELJ,DANIELJ,DONOGHUE,"175,675.00"
