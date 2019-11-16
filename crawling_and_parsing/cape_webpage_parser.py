@@ -41,6 +41,9 @@ def get_parsed_rows_cape(dept, dept_num, total_dept, html_source, driver, detail
 
     columns_found = [*header]
     dept_dict = {}
+    # 10 continuous failures result in script stoppage
+    fail_threshold = 10
+    fail_count = 0
     
     # each row is a course,instructor,term on the dept page
     for course_num,row in enumerate(table.find('tbody').find_all('tr')):
@@ -70,9 +73,13 @@ def get_parsed_rows_cape(dept, dept_num, total_dept, html_source, driver, detail
                     
                     if len(more_course_dict.keys()) == 0:
                         print("")
-                        print(f"No valid results found for {dept} course {course_num+1} and link: {a_element_link}")
-                        stop_processing = True
+                        fail_count += 1
+                        print(f"{fail_count}/{fail_threshold}. No valid detailed results found for {dept} course {course_num+1} and link: {a_element_link}")
+                        if (fail_count >= fail_threshold):
+                            stop_processing = True
                     else:
+                        # reset fail count
+                        fail_count = 0
                         stdout.write('\r')
                         print_string = f"{dept} results({course_num+1} courses)"
                         # need to pad with spaces to keep the above string of fixed length, otherwise remains are not cleaned from screen

@@ -144,8 +144,8 @@ if __name__ == "__main__":
                         help='mode in which to launch browser, default:\'True\'')
     parser.add_argument('--geckodriver_path', type=str, nargs='?', default='./geckodriver',
                         help='path to the geckodriver executable, default:\'./geckodriver\'')
-    parser.add_argument('--output_dir', type=str, nargs='?', default='../data/csv/ucop/',
-                        help='dir where to place the generated csv, default:\'../data/csv/ucop/\'')
+    parser.add_argument('--output_dir', type=str, nargs='?', default='../data/csv/cape/',
+                        help='dir where to place the generated csv, default:\'../data/csv/cape/\'')
     args = parser.parse_args()
 
     if args.headless == 'False':
