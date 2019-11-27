@@ -3,6 +3,7 @@
  
  ## Table of Contents
   * [Data Crawling](#data-crawling)
+  * [Third Party Modules](#third-party-modules)
 
 ## Data Crawling
 
@@ -88,3 +89,10 @@ optional arguments:
                         dir where to place the generated csv,
                         default:'../data/csv/cape/'
 ```
+## Third Party Modules
+
+The third party modules we used were:
+* Numpy
+* Pandas
+* Matplotlib
+* Scipy
