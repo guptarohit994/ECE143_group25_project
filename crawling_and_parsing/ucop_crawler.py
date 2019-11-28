@@ -38,17 +38,8 @@ def do_ucop_crawl(location='San Diego', year=2018, headless=True, geckodriver_pa
     driver.get("https://ucannualwage.ucop.edu/wage/")
     
     print ('Firefox Initialized in %s mode'%('headless' if headless else 'head'))
-           
-    # select location
-    select = Select(driver.find_element_by_id('location'))
-    options_locations = [o.text for o in select.options]
 
-    if 'Select a Location' in options_locations:
-        options_locations.remove('Select a Location')
-
-    assert location in options_locations, f"location can be {options_locations}"
-    select.select_by_visible_text(location)
-
+    # it is critical to load year first because when you select year, location gets reset
     # select year
     #['2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010']
     select = Select(driver.find_element_by_id('year'))
@@ -56,6 +47,16 @@ def do_ucop_crawl(location='San Diego', year=2018, headless=True, geckodriver_pa
 
     assert str(year) in options_years, f"year can be {options_years}"
     select.select_by_visible_text(str(year))
+
+    # select location
+    select = Select(driver.find_element_by_id('location'))
+    options_locations = [o.text for o in select.options]
+
+    if 'Select a Location' in options_locations:
+        options_locations.remove('Select a Location')
+
+    assert location in options_locations, f"location can be {options_locations} for year {year}"
+    select.select_by_visible_text(location)
 
     # select 60 results to be viewed per page
     results_per_page = 60
@@ -133,8 +134,8 @@ if __name__ == "__main__":
                         help='location whose wages to crawl, default:\'San Diego\'')
     parser.add_argument('--year', type=int, nargs='?', default=2018,
                         help='year for which data to crawl, default:2018')
-    parser.add_argument('--headless', type=bool, nargs='?',default=True,
-                        help='mode in which to launch browser, default:True')
+    parser.add_argument('--headless', type=str, default='True',
+                        help='mode (False/True) in which to launch browser, default:True')
     parser.add_argument('--geckodriver_path', type=str, nargs='?', default='./geckodriver',
                         help='path to the geckodriver executable, default:\'./geckodriver\'')
     parser.add_argument('--output_dir', type=str, nargs='?', default='../data/csv/ucop/',
@@ -146,8 +147,7 @@ if __name__ == "__main__":
     else:
         headless = True
 
-    print(f"year:{args.year}, location:{args.location}, headless:{args.headless}, geckodriver_path:{args.geckodriver_path}, output_dir:{args.output_dir}")
-
+    print(f"year:{args.year}, location:{args.location}, headless:{headless}, geckodriver_path:{args.geckodriver_path}, output_dir:{args.output_dir}")
     print("=========================================================================================")
     do_ucop_crawl(location=args.location, year=args.year, headless=headless, geckodriver_path=args.geckodriver_path, output_dir=args.output_dir)
     print("=========================================================================================")
