@@ -2,8 +2,21 @@
  FA19 course final project
  
  ## Table of Contents
+  * [Directory Structure](#directory-structure)
   * [Data Crawling](#data-crawling)
   * [Third Party Modules](#third-party-modules)
+
+## Directory Structure
+
+  * crawling_and_parsing
+      * Contains all parsers and crawlers
+      * `notebooks` folder contains python notebooks used for code development
+      * `geckodriver`
+  * data
+      * Contains data crawled from CAPE, UCOP
+      * Also contained merged dataset that we created
+  * statistical_analysis
+      * Contains modules and notebooks used for analysizing `data`
 
 ## Data Crawling
 
@@ -91,8 +104,10 @@ optional arguments:
 ```
 ## Third Party Modules
 
-The third party modules we used were:
-* Numpy
-* Pandas
-* Matplotlib
-* Scipy
+The third party modules we used are mentioned in `requirements.txt`. To install these Python dependencies and modules - 
+
+```
+pip install -r requirements.txt
+```
+
+**Although `geckodriver` is present in this repository, it also needs Firefox Quantum (v63.0+) to work with.**
