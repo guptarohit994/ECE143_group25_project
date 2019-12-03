@@ -4,8 +4,10 @@ def read_data(uc_name):
     """
     This function reads the data given specific school name and returns it.
     """
-    file_name = 'ucop' + '_' + uc_name + '.csv'
-    salary_data = pd.read_csv(file_name, thousands=',')
+    csv_location = "../data/csv/ucop"
+    file_name = 'ucop' + '_' + uc_name + '_' + 2018 + '_' + 'auto' + '.csv'
+    relative_path = csv_location + '/' + file_name
+    salary_data = pd.read_csv(relative_path, thousands=',')
     return salary_data
     
 def calculate_netsalary(salary_data):
