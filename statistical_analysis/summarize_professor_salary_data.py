@@ -6,7 +6,7 @@ def summarize_professor_salary_data(uc_name):
     This function takes uc school name (san diego, los angeles, berkeley) and prints some statistics about it.
     : param uc_name: (list), uc school name
     """
-    assert uc_name in ['sandiego', 'losangeles', 'berkeley'], "you should enter sandiego, losangeles or berkeley as school names"
+    #assert uc_name in ['sandiego', 'losangeles', 'berkeley'], "you should enter sandiego, losangeles or berkeley as school names"
     
     print('UC ' + uc_name)
     salary_data = helper.read_data(uc_name)
