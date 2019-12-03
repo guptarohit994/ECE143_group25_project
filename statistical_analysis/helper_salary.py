@@ -1,3 +1,5 @@
+import pandas as pd
+
 def read_data(uc_name):
     """
     This function reads the data given specific school name and returns it.
