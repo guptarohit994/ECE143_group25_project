@@ -1,7 +1,7 @@
 import helper
 import os
 import pandas as pd
-import scipy
+import scipy.stats
 import numpy as np
 
 # string matching rules for the different professor types in the professor dataset
