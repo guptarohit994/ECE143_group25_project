@@ -1,3 +1,6 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
 def create_mean_salary_barchart(uc_schools):
     """
     This function takes a list of uc schools and it returns mean salary barchart.
