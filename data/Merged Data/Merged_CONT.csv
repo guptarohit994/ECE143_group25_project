@@ -1,7 +1,0 @@
-SNo,Year,Location,FirstName,LastName,Title,GrossPay,RegularPay,OvertimePay,OtherPay,fullName,Instructor,Course,Term,Enroll,EvalsMade,RcmndClass,RcmndInstr,StudyHrs/wk,AvgGradeExpected,AvgGradeReceived
-33904,2018,San Diego,JOHN C.,MOORE,DEAN,"199,058.00","196,304.00",0.00,"2,754.00",MOOREJOHNC,"Moore,JohnC.",CONT150A-CollegeAcadMentorProgram(A),WI18,7,4,75.0%,75.0%,1.0,,
-33904,2018,San Diego,JOHN C.,MOORE,DEAN,"199,058.00","196,304.00",0.00,"2,754.00",MOOREJOHNC,"Moore,JohnC.",CONT150A-CollegeAcadMentorProgram(A),SP16,14,4,100.0%,100.0%,3.83,C(2.00),
-33904,2018,San Diego,JOHN C.,MOORE,DEAN,"199,058.00","196,304.00",0.00,"2,754.00",MOOREJOHNC,"Moore,JohnC.",CONT150A-CollegeAcadMentorProgram(A),WI16,11,3,100.0%,100.0%,9.5,A(4.00),
-33904,2018,San Diego,JOHN C.,MOORE,DEAN,"199,058.00","196,304.00",0.00,"2,754.00",MOOREJOHNC,"Moore,JohnC.",CONT150A-CollegeAcadMentorProgram(A),SP15,8,4,75.0%,75.0%,1.0,A(4.00),
-33904,2018,San Diego,JOHN C.,MOORE,DEAN,"199,058.00","196,304.00",0.00,"2,754.00",MOOREJOHNC,"Moore,JohnC.",CONT150A-CollegeAcadMentorProgram(A),FA14,7,3,100.0%,100.0%,4.5,,
-43652,2018,San Diego,CARRIE KING,WASTAL,LECT SOE-AY,"85,646.00","85,646.00",0.00,0.00,WASTALCARRIEKING,"Wastal,CarrieKing","CONT68-Disability,RaceandDiversity(A)",WI15,7,5,100.0%,100.0%,3.5,A-(3.80),
