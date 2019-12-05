@@ -1,5 +1,5 @@
-# ECE143_group25_project
- FA19 course final project
+# Analysis of Education & Compensation at UC Schools
+ECE143 FA19 Group 25 Term Project
  
  ## Table of Contents
   * [Directory Structure](#directory-structure)
@@ -17,6 +17,10 @@
       * Also contained merged dataset that we created
   * statistical_analysis
       * Contains modules and notebooks used for analysizing `data`
+      * `Graphs.ipynb` shows the figures that made it to the presentation
+  * `ECE_143_Group_25_Presentation.pdf` 
+      * The final set of slides
+      * Also contains some backup slides which were hard to reject :(
 
 ## Data Crawling
 
@@ -27,7 +31,7 @@ python ucop_crawler.py --location='Berkeley'
 ```
 Sample output (downcounts to 0) -
 ```
-year:2018, location:Berkeley, headless:True, geckodriver_path:./geckodriver, output_dir:../data/csv/ucop/
+year:2018, location:Berkeley, headless:True, geckodriver_path:./geckodriver, output_dir:.
 =========================================================================================
 Firefox Initialized in headless mode
 Need to go through 589 more pages!!!
@@ -67,7 +71,7 @@ python cape_crawler.py
 ```
 Sample output (eg. for CSE department, we want to do a quick crawl and place generated csv in `test` dir) -
 
-`python cape_crawler.py --output_dir test/ --department 'CSE'`
+`python cape_crawler.py --output_dir . --department 'CSE'`
 ```
 department:CSE, detailed:False, headless:True, geckodriver_path:./geckodriver, output_dir:test/
 =========================================================================================
