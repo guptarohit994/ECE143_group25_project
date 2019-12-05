@@ -17,6 +17,10 @@ ECE143 FA19 Group 25 Term Project
       * Also contained merged dataset that we created
   * statistical_analysis
       * Contains modules and notebooks used for analysizing `data`
+      * `Graphs.ipynb` shows the figures that made it to the presentation
+  * `ECE_143_Group_25_Presentation.pdf` 
+      * The final set of slides
+      * Also contains some backup slides which were hard to reject :(
 
 ## Data Crawling
 
