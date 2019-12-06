@@ -10,17 +10,16 @@ ECE143 FA19 Group 25 Term Project
 
   * crawling_and_parsing
       * Contains all parsers and crawlers
-      * `notebooks` folder contains python notebooks used for code development
       * `geckodriver`
   * data
       * Contains data crawled from CAPE, UCOP
-      * Also contained merged dataset that we created
+      * Also contains merged dataset that we created
   * statistical_analysis
       * Contains modules and notebooks used for analysizing `data`
       * `Graphs.ipynb` shows the figures that made it to the presentation
   * `ECE_143_Group_25_Presentation.pdf` 
       * The final set of slides
-      * Also contains some backup slides which were hard to reject :(
+      * Also contains some backup slides which were hard to let go :(
 
 ## Data Crawling
 
