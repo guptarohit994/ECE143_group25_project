@@ -93,7 +93,7 @@ def main():
     Merge CAPE dataset and UCOP dataset by same instructors name
     :return void
     '''
-    df = pd.read_csv('ucop_sd_all.csv')
+    df = pd.read_csv('../csv/ucop/ucop_san_diego_2018_auto.csv')
     df = df.dropna(subset=['FirstName'])
     df = df.dropna(subset=['LastName'])
     # Add full name and delete first name and last name
@@ -118,8 +118,8 @@ def main():
                'SXTH', 'THEA', 'TMC', 'TWS', 'USP', 'VIS', 'WARR', 'WCWP']
     for i in range(len(csvList)):
         print(i)
-        csv = 'cape_' + csvList[i] + '_auto.csv'
-        fname = 'D:\ECE143\ECE143_group25_project-master\data\Merged_' + csvList[i] + '.csv'
+        csv = '../csv/cape/cape_' + csvList[i] + '_auto.csv'
+        fname = './Merged_' + csvList[i] + '.csv'
         merge(df, csv, fname)
 
 
