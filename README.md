@@ -113,4 +113,4 @@ The third party modules we used are mentioned in `requirements.txt`. To install 
 pip install -r requirements.txt
 ```
 
-**Although `geckodriver` is present in this repository, it also needs Firefox Quantum (v63.0+) to work with.**
+**Although `geckodriver` is present in this repository, it also needs [Firefox Quantum (v63.0+)](https://www.mozilla.org/en-US/firefox/ "Mozilla Homepage") to work with which should be manually installed.**
