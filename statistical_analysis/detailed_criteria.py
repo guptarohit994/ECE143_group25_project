@@ -62,6 +62,7 @@ def calculate_detailed_corr(dept_list):
     dept_list_to_use = dept_list
     # minimum evaluations to use (otherwise, the course is discarded)
     min_evals_threshold = 20
+    pd.options.mode.chained_assignment = None 
 
     total_corrs = pd.DataFrame(columns=["Criteria", "Corr", "Dept"])
     total_avg_df = pd.DataFrame()

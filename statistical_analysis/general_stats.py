@@ -31,7 +31,7 @@ def get_general_statistics(name, dept_list_to_use):
         print("{} response rate std: {}".format(name, std_respond_rate))
         
         
-import helper_salary as helper
+import helper_salary
 
 def summarize_professor_salary_data(uc_name):
     """
@@ -41,8 +41,8 @@ def summarize_professor_salary_data(uc_name):
     #assert uc_name in ['sandiego', 'losangeles', 'berkeley'], "you should enter sandiego, losangeles or berkeley as school names"
     
     print('UC ' + uc_name)
-    salary_data = helper.read_data(uc_name)
-    salary_data = helper.calculate_netsalary(salary_data)
+    salary_data = helper_salary.read_data(uc_name)
+    salary_data = helper_salary.calculate_netsalary(salary_data)
     
     salary_data_professors = salary_data[salary_data['Title'].str.contains("PROF")]
     total_payment = salary_data_professors['TotalPay'];

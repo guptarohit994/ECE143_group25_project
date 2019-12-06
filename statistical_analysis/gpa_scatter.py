@@ -22,7 +22,7 @@ def plot_gpa_scatter():
     y = department_df["AvgGradeReceived"]
     x = department_df["AvgGradeExpected"]
     A = np.vstack([x, np.ones(len(x))]).T
-    m, c = np.linalg.lstsq(A, y)[0]
+    m, c = np.linalg.lstsq(A, y, rcond=None)[0]
     print("m:{}, c:{}".format(m,c))
     ax.plot(np.linspace(lower_bound,4,10),np.linspace(lower_bound,4,10),c="red")
     ax.plot(np.linspace(lower_bound,4,10),(np.linspace(lower_bound,4,10)*m) + c,c="blue")
