@@ -26,7 +26,7 @@ ECE143 FA19 Group 25 Term Project
 ### UCOP
 ```
 cd crawling_and_parsing
-python ucop_crawler.py --location='Berkeley'
+python ucop_crawler.py --output_dir . --location='Berkeley'
 ```
 Sample output (downcounts to 0) -
 ```
@@ -72,7 +72,7 @@ Sample output (eg. for CSE department, we want to do a quick crawl and place gen
 
 `python cape_crawler.py --output_dir . --department 'CSE'`
 ```
-department:CSE, detailed:False, headless:True, geckodriver_path:./geckodriver, output_dir:test/
+department:CSE, detailed:False, headless:True, geckodriver_path:./geckodriver, output_dir:.
 =========================================================================================
 Firefox Initialized in headless mode
 *********** Initiating a SSO login ***********
