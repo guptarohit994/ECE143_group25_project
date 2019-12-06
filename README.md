@@ -1,5 +1,4 @@
-# Analysis of Education & Compensation at UC Schools
-ECE143 FA19 Group 25 Term Project
+![](title_image.png)
  
  ## Table of Contents
   * [Directory Structure](#directory-structure)
